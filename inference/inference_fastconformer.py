@@ -95,7 +95,7 @@ def load_typhoon_model(device='auto'):
     if device == 'auto':
         device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
-    print(f"🌪️ Loading Typhoon ASR Real-Time model...")
+    print(f"🌪️ Loading Typhoon Isan ASR Real-Time model...")
     print(f"   Device: {device.upper()}")
 
     model = nemo_asr.models.ASRModel.from_pretrained(
