@@ -99,7 +99,7 @@ def load_typhoon_model(device='auto'):
     print(f"   Device: {device.upper()}")
 
     model = nemo_asr.models.ASRModel.from_pretrained(
-        model_name="Warit/typhoon-isan-asr-realtime",
+        model_name="scb10x/typhoon-isan-asr-realtime",
         map_location=device
     )
 
