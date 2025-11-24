@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 """
-Typhoon ASR Real-Time Inference Script
+Typhoon Isan ASR Real-Time Inference Script
 
-A simple script for running Thai speech recognition using Typhoon ASR Real-Time model.
+A simple script for running Isan speech recognition using Typhoon Isan ASR Real-Time model.
 Supports both basic transcription and detailed output with estimated timestamps.
 
 Usage:
-    python typhoon_asr_inference.py input_audio.m4a
-    python typhoon_asr_inference.py input_audio.wav --with-timestamps
-    python typhoon_asr_inference.py input_audio.mp3 --device cuda
+    python inference_fastconformer.py input_audio.m4a
+    python inference_fastconformer.py input_audio.wav --with-timestamps
+    python inference_fastconformer.py input_audio.mp3 --device cuda
 """
 
 import os
@@ -25,7 +25,7 @@ import soundfile as sf
 
 def prepare_audio(input_path, output_path=None, target_sr=16000):
     """
-    Prepare audio file for Typhoon ASR Real-Time processing
+    Prepare audio file for Typhoon ASR Isan Real-Time processing
 
     Args:
         input_path (str): Source audio file path
@@ -84,7 +84,7 @@ def prepare_audio(input_path, output_path=None, target_sr=16000):
 
 def load_typhoon_model(device='auto'):
     """
-    Load Typhoon ASR Real-Time model
+    Load Typhoon Isan ASR Real-Time model
 
     Args:
         device (str): Device to use ('auto', 'cpu', 'cuda')
@@ -189,7 +189,7 @@ def transcription_with_timestamps(model, audio_file):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Typhoon ASR Real-Time Inference")
+    parser = argparse.ArgumentParser(description="Typhoon Isan ASR Real-Time Inference")
     parser.add_argument("input_file", help="Input audio file path")
     parser.add_argument("--with-timestamps", action="store_true",
                        help="Generate estimated word timestamps")
@@ -198,7 +198,7 @@ def main():
 
     args = parser.parse_args()
 
-    print("🌪️ Typhoon ASR Real-Time Inference")
+    print("🌪️ Typhoon Isan ASR Real-Time Inference")
     print("=" * 50)
 
     # Check input file
